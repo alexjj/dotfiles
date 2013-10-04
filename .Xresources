@@ -2,21 +2,21 @@
 !! Free to use or modify
 
 ! Appearance
-URxvt*scrollBar: false
-URxvt*transparent: false
-URxvt*iconFile:    /home/alex/dotfiles/archlinux-icon-crystal-64.svg
-URxvt*depth: 32
-URxvt*cursorBlink: true
-URxvt*cursorUnderline: true
+urxvt*scrollBar: false
+urxvt*transparent: false
+urxvt*iconFile:    /home/alex/dotfiles/archlinux-icon-crystal-64.svg
+urxvt*depth: 32
+urxvt*cursorBlink: true
+urxvt*cursorUnderline: true
 
 ! Fix sshing into servers
-URxvt*termName: rxvt
+urxvt*termName: rxvt
 
 
 ! Font -----------------------------------------------------------------
 
-URxvt*font: xft:Termsyn:size=10
-URxvt*boldFont: xft:Termsyn:size=10
+urxvt*font: xft:Termsyn:size=10
+urxvt*boldFont: xft:Termsyn:size=10
 
 ! Xft settings ---------------------------------------------------------
 
@@ -27,10 +27,11 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
 ! Perl extensions ------------------------------------------------------
-URxvt*perl-ext-common:  default,matcher,clipboard
-URxvt*clipboard.autocopy: true
-URxvt*url-launcher: /usr/bin/firefox
-URxvt*matcher.button: 1
+urxvt*perl-lib: /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher,clipboard
+urxvt*clipboard.autocopy: true
+urxvt*url-launcher: firefox
+urxvt*matcher.button: 1
 
 !! Colours -------------------------------------------------------------
 
