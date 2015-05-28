@@ -1,0 +1,39 @@
+! Appearance -----------------------------------------------------------
+
+urxvt*scrollBar: false
+urxvt*transparent: false
+urxvt*depth: 32
+urxvt*cursorBlink: true
+urxvt*cursorUnderline: true
+urxvt*letterSpace: -1
+urxvt*internalBorder: 4
+
+! Fix sshing into servers
+urxvt*termName: rxvt
+
+! Font -----------------------------------------------------------------
+
+urxvt*font: xft:source code pro:size=9
+urxvt*boldFont: xft:monospace:size=9
+
+! Xft settings ---------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! Perl extensions ------------------------------------------------------
+
+urxvt*perl-lib: /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher,clipboard
+urxvt*clipboard.autocopy: true
+urxvt*url-launcher: firefox
+urxvt*matcher.button: 1
+
+! Colours -------------------------------------------------------------
+
+#include "/home/alex/.colours/solarized-light"
+!#include "more"
+
