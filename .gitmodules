@@ -1,0 +1,3 @@
+[submodule "vim/.vim/bundle/pydoc"]
+	path = vim/.vim/bundle/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
