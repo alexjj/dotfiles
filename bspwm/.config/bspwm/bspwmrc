@@ -25,4 +25,4 @@ bspc rule -a Screenkey manage=off
 # Autostart
 
 xsetroot -cursor_name left_ptr
-panel &
+/home/alex/.config/bar/panel &
