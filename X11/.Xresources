@@ -8,13 +8,15 @@ urxvt*cursorUnderline: true
 urxvt*letterSpace: -2
 urxvt*internalBorder: 4
 
-! Fix sshing into servers
+! Fix things
 urxvt*termName: rxvt
+urxvt*keysym.Home: \033[1~
+urxvt*keysym.End:  \033[4~
 
 ! Font -----------------------------------------------------------------
 
 urxvt*font: xft:source code pro:size=9
-urxvt*boldFont: xft:monospace:size=9
+urxvt*boldFont: xft:source code pro:size=10
 
 ! Xft settings ---------------------------------------------------------
 
@@ -37,6 +39,11 @@ urxvt*iso14755: false
 
 ! Colours -------------------------------------------------------------
 
-#include "/home/alex/.colours/jellyx"
-!#include "more"
-
+!#include "/home/alex/.colours/base16-codeschool"
+#include "/home/alex/.colours/dotdev"
+!#include "/home/alex/.colours/earth"
+!#include "/home/alex/.colours/jellyx"
+!#include "/home/alex/.colours/numix-darkest"
+!#include "/home/alex/.colours/solarized-dark"
+!#include "/home/alex/.colours/solarized-light"
+!#include "/home/alex/.colours/sorcerer"
