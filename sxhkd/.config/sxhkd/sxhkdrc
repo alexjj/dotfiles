@@ -84,9 +84,13 @@ alt + {_,shift + }{1-9,0}
 alt + button{1-3}
 	; bspc pointer -g {move,resize_side,resize_corner}
 
-## 
+## U 
 alt + @button{1-3}
 	bspc pointer -u
+
+# Change window gap
+ctrl + alt + {minus,equal}
+        bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
 
 #
 # wm independent hotkeys

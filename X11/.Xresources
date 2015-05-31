@@ -40,10 +40,11 @@ urxvt*iso14755: false
 ! Colours -------------------------------------------------------------
 
 !#include "/home/alex/.colours/base16-codeschool"
-#include "/home/alex/.colours/dotdev"
+!#include "/home/alex/.colours/dotdev"
 !#include "/home/alex/.colours/earth"
-!#include "/home/alex/.colours/jellyx"
+#include "/home/alex/.colours/jellyx"
 !#include "/home/alex/.colours/numix-darkest"
 !#include "/home/alex/.colours/solarized-dark"
 !#include "/home/alex/.colours/solarized-light"
 !#include "/home/alex/.colours/sorcerer"
+!#include "/home/alex/.colours/vanilla"
