@@ -1,0 +1,7 @@
+borderwidth 2
+color activeborder blue
+color inactiveborder darkblue
+gap 0 0 0 180
+bind CM-r reload
+command urxvt /usr/local/bin/urxvt
+command firefox /usr/local/bin/firefox
