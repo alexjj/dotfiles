@@ -100,6 +100,6 @@ XTerm*background: black
 XTerm*foreground: white
 XTerm*scrollBar: false
 XTerm*locale: utf8
-XTerm*faceName: termius:pixelsize=10:antialias=true:hinting=true
+XTerm*faceName: termius:pixelsize=12
 XTerm*eightBitInput: true
 XTerm*pointerShape: left_ptr
