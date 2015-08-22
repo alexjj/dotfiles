@@ -9,7 +9,7 @@ urxvt*cursorUnderline: true
 urxvt*internalBorder: 4
 
 ! Fix things
-urxvt*termName: rxvt
+urxvt*termName: rxvt-256color
 urxvt*keysym.Home: \033[1~
 urxvt*keysym.End:  \033[4~
 
@@ -30,12 +30,12 @@ Xft.lcdfilter: lcddefault
 
 ! Perl extensions ------------------------------------------------------
 
-urxvt*perl-lib: /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:  default,matcher,clipboard
-urxvt*clipboard.autocopy: true
-urxvt*url-launcher: firefox
-urxvt*matcher.button: 1
-urxvt*iso14755: false
+!urxvt*perl-lib: /usr/lib/urxvt/perl/
+!urxvt*perl-ext-common:  default,matcher,clipboard
+!urxvt*clipboard.autocopy: true
+!urxvt*url-launcher: firefox
+!urxvt*matcher.button: 1
+!urxvt*iso14755: false
 
 ! Colours -------------------------------------------------------------
 
