@@ -5,7 +5,7 @@ urxvt*transparent: false
 urxvt*depth: 32
 urxvt*cursorBlink: true
 urxvt*cursorUnderline: true
-!urxvt*letterSpace: -2
+urxvt*letterSpace: -2
 urxvt*internalBorder: 4
 
 ! Fix things
