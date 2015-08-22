@@ -94,3 +94,12 @@ xcalc.ti.button38.background: #555595
 xcalc.ti.button39.background: #555595
 XCalc*Cursor:                 hand2
 XCalc*ShapeStyle:             rectangle
+
+!Xterm
+XTerm*background: black
+XTerm*foreground: white
+XTerm*scrollBar: false
+XTerm*locale: utf8
+XTerm*faceName: termius:pixelsize=10:antialias=true:hinting=true
+XTerm*eightBitInput: true
+XTerm*pointerShape: left_ptr
