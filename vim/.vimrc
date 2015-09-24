@@ -59,6 +59,13 @@ set cursorline
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+let mapleader=","       " leader is comma
+
+
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
