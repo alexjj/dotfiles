@@ -11,11 +11,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " The bundles you install will be listed here
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'fs111/pydoc.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 " All of your Plugins must be added before the following line
 call vundle#end() 
 filetype plugin indent on
