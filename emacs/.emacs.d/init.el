@@ -1,15 +1,6 @@
 ;; -*- emacs-lisp -*-
 ;;; alexjj emacs config
 
-;; org-mode
-
-(unless package-archive-contents    ;; Refresh the packages descriptions
-  (package-refresh-contents))
-(setq package-load-list '(all))     ;; List of packages to load
-(unless (package-installed-p 'org)  ;; Make sure the Org package is
-  (package-install 'org))           ;; installed, install it if not
-(package-initialize)                ;; Initialize & Install Package
-
 ;; Ledger
 
 (autoload 'ledger-mode "ledger-mode" "A major mode for Ledger" t)
