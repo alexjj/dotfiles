@@ -30,3 +30,7 @@
 (setq ido-enable-flex-matching t)
 (setq ido-ignore-extensions t)
 (add-to-list 'completion-ignored-extensions ".pyc")
+
+
+;; Use ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
