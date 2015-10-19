@@ -1,12 +1,19 @@
 ;; -*- emacs-lisp -*-
 ;;; alexjj emacs config
 
+;; MELPA
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+
 ;; Ledger
 
 (autoload 'ledger-mode "ledger-mode" "A major mode for Ledger" t)
 (add-to-list 'load-path
-             (expand-file-name "/usr/share/emacs/site-lisp/ledger-mode/"))
+             (expand-file-name "~/.emacs.d/elpa/ledger-mode-3.1/"))
 (add-to-list 'auto-mode-alist '("\\.ledger$" . ledger-mode))
+(setq ledger-post-auto-adjust-amounts t)
 
 
 ;; emacs
