@@ -1,0 +1,27 @@
+name: ledger
+root: ~/money
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# Source our alias file so that we can access it 
+pre_window: source ~/dev/GSWL-ecosystem/alias
+
+
+windows:
+  - git:
+      layout: even-vertical
+      panes:
+        - tig
+        - git status
+  - make:
+      layout: even-vertical
+      panes:
+          - echo "Convert CSV files here ..."
+          - echo "Place for Temporary calculations." && bc
+  - edit: $EDITOR misc.tmp.txt meta.txt
+  - overview: ledreports
+  - rand:
+  - rand:
+  - rand:
