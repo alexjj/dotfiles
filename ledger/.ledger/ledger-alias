@@ -1,12 +1,22 @@
 #!/bin/bash
-LEDGER_ECOSYSTEM_DIR=$(dirname "$0") # needed for later
 
-alias led="ledger"
+LEDGER_ECOSYSTEM_DIR=/home/alex/money/scripts
+
+export LEDGER_FILE=/home/alex/money/money.ledger
+export LEDGER_PRICE_DB=/home/alex/money/ledger.pricedb
+
+l () {
+ledger -w -f ${LEDGER_FILE} --price-db ${LEDGER_PRICE_DB} -V --pager less --date-format='%d-%b-%y' $*
+}
+
+
 alias ledreports="${LEDGER_ECOSYSTEM_DIR}/reports.py"
-alias ledlm='led -p "last month"'
+
+alias ledlm='l -p "last month"'
 alias ledplm='ledp -p "last month"'
+
 # This is used for conversion of CSV files only
-alias ledconv="${LEDGER_ECOSYSTEM_DIR}/convert.py"
+alias lconv="${LEDGER_ECOSYSTEM_DIR}/convert.py"
 
 # These variables are used in conjunction with the CSV files from the bank.
 # When the latter are named consistently (ex:"apr2016_bank1.csv,
@@ -104,17 +114,18 @@ plot \"-\" using 1:2 with lines
 # Once all CSV files are converted AND misc.tmp.txt contains manually added
 # ledger journal entries, everything needs to be merged and appended to the
 # actual journal.
+
 ATMPFILE="/tmp/lmall.tmp.txt" # used to store all postings from all tmp text files
 DTMPFILE="/tmp/lmsorted.tmp.txt" # used to store the same as above, but sorted by date
+
 # This alias merges all tmp Ledger files, sorts them by date, and appends them
 # to the main journal.txt:
-
 
 alias lmmake="cat \$(listTmpFiles) > $ATMPFILE && ledger $LEDGERARGS -f $ATMPFILE --sort 'd' print > $DTMPFILE && git checkout journal.txt && (echo ' '; cat $DTMPFILE) >> journal.txt && less $DTMPFILE && rm $ATMPFILE $DTMPFILE"
 alias lmclean="rm ./tmp/*"
 
-# Source the file in the current working directory
-# source alias.local 2>/dev/null
+# Ledger tmux
+alias slt='tmuxinator start ledger'
 
 
 

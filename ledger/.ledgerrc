@@ -4,5 +4,4 @@
 --wide
 --strict
 --date-format='%d-%b-%y'
---check-payees
 --market
