@@ -22,7 +22,8 @@
     py-autopep8
     ein
     neotree
-    magit))
+    magit
+    column-enforce-mode))
 
 (mapc #'(lambda (package)
     (unless (package-installed-p package)
@@ -73,6 +74,10 @@
 ;;neotree
 (setq neo-smart-open t)
 (global-set-key [f8] 'neotree-toggle)
+
+;; Highlight 80 columns
+(require 'column-enforce-mode)
+(global-column-enforce-mode t)
 
 ;;org-mode configuration
 ;; Enable org-mode
