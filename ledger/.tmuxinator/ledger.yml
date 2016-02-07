@@ -5,8 +5,11 @@ root: ~/money
 # pre: sudo /etc/rc.d/mysqld start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# Source our alias file so that we can access it 
-pre_window: source ~/dev/GSWL-ecosystem/alias
+# Source our alias file so that we can access it
+
+# TODO: Reports page
+
+pre_window: source ~/.ledger/ledger-alias
 
 
 windows:
@@ -20,8 +23,11 @@ windows:
       panes:
           - echo "Convert CSV files here ..."
           - echo "Place for Temporary calculations." && bc
-  - edit: $EDITOR misc.tmp.txt meta.txt
-  - overview: ledreports
-  - rand:
-  - rand:
-  - rand:
+  - edit: vim
+  - reports:
+      layout: even-vertical
+      panes:
+          - echo "Run reports here"
+          - vi scripts/reports.txt
+  - term:
+  - term:
