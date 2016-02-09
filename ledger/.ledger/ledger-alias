@@ -17,7 +17,7 @@ THIS_MTH=$(date +'%b' | tr '[:upper:]' '[:lower:]') # Abbreviated Month Name, ex
 LAST_MTH=$(date +'%b' -d 'last month' | tr '[:upper:]' '[:lower:]') # "apr"
 THIS_YEAR=$(date +'%Y') # "2016"
 LAST_YEAR=$(date +'%Y' -d 'last year') # "2015"
-LAST_MTH_AND_YEAR="${LAST_AMN}${THIS_YEAR}" # "apr2015"
+LAST_MTH_AND_YEAR="${LAST_MTH}${THIS_YEAR}" # "apr2015"
 if [[ "$LAST_MTH" == "dec" ]]; then
     LAST_MTH_AND_YEAR="${LAST_MTH}${LAST_YEAR}"
 fi
@@ -28,5 +28,13 @@ fi
 alias slt='tmuxinator start ledger'
 
 
-# This is where CSV files are stored.
-CSV_DIR=./csv
+# Reckon Imports
+
+alias importcc='reckon -f ~/money/csv/hsbcworld.csv --contains-header -c 'USD' -a Liabilities:US:HSBC:World --suffixed -l ~/money/liabilities.us.hsbc.world.ledger -o ~/money/liabilities.us.hsbc.world.reckon.ledger'
+
+# Export to single file
+alias exportledger='ledger print --sort date --date-format %Y/%m/%d> ~/money/all.ledger'
+
+lall () {
+ledger -f ~/money/all.ledger --price-db ${LEDGER_PRICE_DB} -V --pager less --date-format='%d-%b-%y' $*
+}
