@@ -251,7 +251,10 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-(setq vc-follow-symlinks t)
+  (setq vc-follow-symlinks t)
+  (add-to-list 'load-path "/home/alex/beancount/src/elisp")
+  (require 'beancount)
+  (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
