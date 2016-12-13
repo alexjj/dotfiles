@@ -32,6 +32,11 @@ set showmatch
 nnoremap j gj
 nnoremap k gk
 
+" Cycle buffers with Ctrl-Tab
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
+
+
 let mapleader=" "       " leader is spacebar
 
 
@@ -54,3 +59,8 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'nathangrigg/vim-beancount'
 call plug#end()
+
+"" Beancount config
+autocmd FileType beancount inoremap <buffer> . .<C-O>:AlignCommodity<CR>
+nnoremap <buffer> <leader>= :AlignCommodity<CR>
+vnoremap <buffer> <leader>= :AlignCommodity<CR>
