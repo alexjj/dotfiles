@@ -1,42 +1,7 @@
-""""""""""""""""""""""VUNDLE PLUGIN""""""""""""""""""""
+"""""""""""""""
+""  Base Config 
 
-set nocompatible
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The bundles you install will be listed here
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'kien/ctrlp.vim'
-Plugin 'klen/python-mode'
-Plugin 'fs111/pydoc.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-" All of your Plugins must be added before the following line
-call vundle#end() 
-filetype plugin indent on
-
-" Brief help
-" " :PluginList       - lists configured plugins
-" " :PluginInstall    - installs plugins; append `!` to update or just
-" " :PluginUpdate
-" " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" " :PluginClean      - confirms removal of unused plugins; append `!` to
-" " auto-approve removal
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " Put your non-Plugin stuff after this line
-"
-"
-""""""""""""""""""""""BASE CONFIG"""""""""""""""""""""""
+" Set encoding
 set encoding=utf-8
 
 " enable syntax highlighting
@@ -67,7 +32,7 @@ set showmatch
 nnoremap j gj
 nnoremap k gk
 
-let mapleader=","       " leader is comma
+let mapleader=" "       " leader is spacebar
 
 
 " enable all Python syntax highlighting features
@@ -82,12 +47,10 @@ augroup vimrc_autocmds
    autocmd FileType python set nowrap
    augroup END
 
-" Plugin Config "
-
-" NerdTree Config
-" Tab to open/close NERDTree
-map <Tab> :NERDTreeToggle<CR>
-" Automatically open NERDTree with vim
-autocmd vimenter * NERDTree
-" Close vim if only NERDTree open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Plugin Manager
+"" Call PlugInstall or PlugUpdate
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'nathangrigg/vim-beancount'
+call plug#end()
