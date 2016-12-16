@@ -58,9 +58,14 @@ augroup vimrc_autocmds
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'nathangrigg/vim-beancount'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 "" Beancount config
 autocmd FileType beancount inoremap <buffer> . .<C-O>:AlignCommodity<CR>
 nnoremap <buffer> <leader>= :AlignCommodity<CR>
 vnoremap <buffer> <leader>= :AlignCommodity<CR>
+
+"" Vim-repeat config
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
