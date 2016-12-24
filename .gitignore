@@ -1,0 +1,6 @@
+# git ignore for dotfiles
+
+# vim
+vim/.vim/bundle
+vim/.vim/plugged/
+vim/.vim/.netrwhist
