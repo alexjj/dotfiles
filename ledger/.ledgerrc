@@ -1,5 +1,0 @@
---file /home/alex/money/money.ledger
---price-db /home/alex/money/ledger.pricedb
---pager /usr/bin/less
---strict
---market
